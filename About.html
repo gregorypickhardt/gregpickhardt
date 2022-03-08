@@ -35,7 +35,25 @@
     <meta property="og:title" content="About">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-  </head>
+  <script>
+    function gdprConfirmed() {
+        return true;
+    }
+    if (gdprConfirmed()) {
+    document.write("\
+    \
+    <!-- Google Analytics -->\
+    <gascript async src=\"https://www.googletagmanager.com/gtag/js?id=G-KF259L63T0\"></gascript>\
+    <gascript>\
+        window.dataLayer = window.dataLayer || [];\
+        function gtag(){dataLayer.push(arguments);}\
+        gtag('js', new Date());\
+        gtag('config', 'G-KF259L63T0');\
+    </gascript>\
+    <!-- End Google Analytics -->\
+    ".replace(/gascript/g, 'script'));
+    }
+    </script></head>
   <body class="u-body u-xl-mode"><header class="u-align-center-xs u-clearfix u-header u-sticky u-sticky-a979 u-white u-header" id="sec-96c6"><div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-custom-font u-font-lato u-text u-text-default u-text-grey-90 u-text-1">
           <a class="u-btn u-button-link u-button-style u-custom-font u-font-lato u-none u-text-grey-90 u-btn-1" href="https://gregorypickhardt.github.io/">Gregory Pickhardt</a>
